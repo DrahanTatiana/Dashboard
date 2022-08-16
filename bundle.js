@@ -240,7 +240,7 @@
         const nameFromStorage = localStorage.getItem('name');
 
         if (nameFromStorage === null) {
-            const name = prompt('Доброго вечора, МИ з України!</b>rЯк до вас звертатися?');
+            const name = prompt('Доброго вечора, МИ з України!<br>Як до вас звертатися?');
             if (name === '') {
                 document.querySelector('#hi').innerHTML = `<b>Гость</b>, ласкаво просимо!`;
             } else {
