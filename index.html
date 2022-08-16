@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/normalize.css">
+    <link rel="stylesheet" href="assets/style/index.css">
+    <link rel="stylesheet" href="assets/style/greeting.css">
+    <link rel="stylesheet" href="assets/style/calendar.css">
+    <link rel="stylesheet" href="assets/style/bootstrap.css">
+    <link rel="stylesheet" href="assets/style/forecast.css">
+    <link rel="stylesheet" href="assets/style/tasks.css">
+    <link rel="stylesheet" href="assets/style/chart.css">
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="flex1">
+            <header class="header">
+                <img class="images" src="./assets/images/Image003.png" alt="hello">
+                <div id="hi">
+                </div>
+            </header>
+
+            <main>
+
+                <section class="calendar_section">
+                    <div id="container">
+                        <div id="header">
+                            <button id="backButton">Попередній</button>
+                            <div id="monthDisplay" class="header__month"></div>
+                            <button id="nextButton">Наступний</button>
+                        </div>
+
+                        <div id="weekdays">
+                            <div class="weekdays__day">Понеділок</div>
+                            <div class="weekdays__day">Вівторок</div>
+                            <div class="weekdays__day">Середа</div>
+                            <div class="weekdays__day">Четвер</div>
+                            <div class="weekdays__day">П'ятниця</div>
+                            <div class="weekdays__day">Субота</div>
+                            <div class="weekdays__day">Неділя</div>
+                        </div>
+
+                        <div id="calendar"></div>
+                    </div>
+                    <div id="newEvent">
+                        <h2>Нова подія</h2>
+
+                        <input type="text" id="eventTitleInput" placeholder="Название события" maxlength="8">
+                        <textarea id="eventInfo" placeholder="Напоминание"></textarea>
+
+                        <button id="saveButton">Зберегти</button>
+                        <button id="cancelButton">Видалити</button>
+                    </div>
+
+                    <div id="deleteEvent">
+                        <h2>Event</h2>
+
+                        <p id="event_txt"></p>
+                        <p id="event_txt_info"></p>
+
+                        <button id="deleteButton">Видалити</button>
+                        <button id="closeButton">Зберегти</button>
+                    </div>
+
+                    <div id="backgrounModal"></div>
+                </section>
+
+                <section class="list-group">
+
+                    <h2 class="list-group_h2">Перелік справ</h2>
+                    <div class="list-group_text-area">
+                        <textarea class="form-control" id="exampleTextarea" rows="1"></textarea>
+                        <p class="text-danger"></p>
+                        <button id="addButton" class="btn btn-warning" type="button" onclick="addNote()">Додати</button>
+                    </div>
+                    <div id="notes" class="list-group-item list-group-item-action">
+                    </div>
+                </section>
+
+                <!-- <section class="sportChart" id="sportChart"> -->
+                <!-- <canvas id="myChart" height="100"></canvas> -->
+                <!-- <div class="stepsDiv"> -->
+                <!-- <p>Введите данные</p> -->
+                <!-- <span class="stepsSpan">Пн</span><input type="number" min=100 max=100000 value=0 step=50 class="stepsInput"> -->
+                <!-- <span class="stepsSpan">Вт</span><input type="number" min=100 max=100000 value=0 step=50 class="stepsInput"> -->
+                <!-- <span class="stepsSpan">Ср</span><input type="number" min=100 max=100000 value=0 step=50 class="stepsInput"> -->
+                <!-- <span class="stepsSpan">Чт</span><input type="number" min=100 max=100000 value=0 step=50 class="stepsInput"> -->
+                <!-- <span class="stepsSpan">Пт</span><input type="number" min=100 max=100000 value=0 step=50 class="stepsInput"> -->
+                <!-- <span class="stepsSpan">Сб</span><input type="number" min=100 max=100000 value=0 step=50 class="stepsInput"> -->
+                <!-- <span class="stepsSpan">Вс</span><input type="number" min=100 max=100000 value=0 step=50 class="stepsInput"> -->
+                <!-- <button class="stepsButton" onclick="render()">Создать</button> -->
+                <!-- <button class="stepsButton" onclick="destroy()">Очистить</button> -->
+                <!-- </div> -->
+                <!-- </section> -->
+        </div>
+
+        <div class="flex2">
+            <section class="app-wrap">
+                <section class="location">
+                    <h3 class="city rounded-pill bg-secondary"></h3>
+                    <div class="date text-secondary"></div>
+                </section>
+                <div class="current">
+                    <h1 class="temp"></h1>
+                    <div class="weather__icon"></div>
+                    <div class="weather__description"></div>
+                    <div class="high-low alert-warning"></div>
+                    <div class="container">
+                        <div class="humidity__container">
+                            <img class="humidity-icon" src="assets/images/humidity.png" alt="logo">
+                            <div class="humidity"></div>
+                        </div>
+                        <div class="wind__container">
+                            <img class="wind-icon" src="assets/images/wind.png" alt="logo">
+                            <div class="wind"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="sportChart" id="sportChart">
+                <canvas id="myChart" height="200"></canvas>
+                <div class="stepsDiv">
+                    <span class="stepsSpan">Пн</span><input type="number" min=100 max=100000 value=0 step=50
+                        class="stepsInput">
+                    <span class="stepsSpan">Вт</span><input type="number" min=100 max=100000 value=0 step=50
+                        class="stepsInput">
+                    <span class="stepsSpan">Ср</span><input type="number" min=100 max=100000 value=0 step=50
+                        class="stepsInput">
+                    <span class="stepsSpan">Чт</span><input type="number" min=100 max=100000 value=0 step=50
+                        class="stepsInput">
+                    <span class="stepsSpan">Пт</span><input type="number" min=100 max=100000 value=0 step=50
+                        class="stepsInput">
+                    <span class="stepsSpan">Сб</span><input type="number" min=100 max=100000 value=0 step=50
+                        class="stepsInput">
+                    <span class="stepsSpan">Вс</span><input type="number" min=100 max=100000 value=0 step=50
+                        class="stepsInput">
+                    <button class="stepsButton" onclick="render()">Створити</button>
+                    <button class="stepsButton" onclick="destroy()">Знищити</button>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    </main>
+    <script sourceType='module' src="bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.min.js
+"></script>
+    <script src="assets/js/calendar.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/tasks.js"></script>
+</body>
+
+</html>

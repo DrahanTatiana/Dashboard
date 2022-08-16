@@ -1,0 +1,40 @@
+.sportChart {
+    /* margin-left: 25px; */
+    /* margin-right: 25px; */
+    margin-top: 20px;
+    height: min-content;
+    color: rgb(71, 109, 185);
+    width: 95%;
+    margin-bottom: 10px;
+}
+
+#myChart {
+    height: 30vmax;
+}
+
+.stepsInput {
+    width: 3.8vmax;
+    border-radius: 5px;
+    margin: 1.7px;
+    border: none;
+    font-size: 0.9vw;
+
+}
+
+.stepsSpan {
+    margin-right: 3px;
+    font-size: 0.8vw;
+}
+
+.stepsButton {
+    border-radius: 5px;
+    border: none;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 85px;
+    background-color: rgba(252, 243, 125, 0.596);
+    color: rgb(132, 150, 252);
+    box-shadow: 2px 2px 2.5px 2.5px rgba(129, 145, 218, 0.733);
+    /* font-size: 0.9vw; */
+
+}

@@ -1,0 +1,22 @@
+{
+  "name": "f2_team2_project_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itgirlschool/f2_team2_project_js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itgirlschool/f2_team2_project_js/issues"
+  },
+  "homepage": "https://github.com/itgirlschool/f2_team2_project_js#readme",
+  "dependencies": {
+    "browserify": "^17.0.0"
+  }
+}

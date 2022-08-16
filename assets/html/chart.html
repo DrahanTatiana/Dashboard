@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/normalize.css">
+    <link rel="stylesheet" href="assets/style/chart.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+
+
+<div class="sportChart" id="sportChart">
+        <canvas id="myChart"></canvas>
+        <div class="stepsDiv">
+            <p>Введите данные</p>
+        <span class="stepsSpan">Пн</span><input type="number" min=100 max=100000 value=0 step=50 class="stepsInput">
+        <span class="stepsSpan">Вт</span><input type="number" min=100 max=100000 value=0 step=50 class="stepsInput">
+        <span class="stepsSpan">Ср</span><input type="number" min=100 max=100000 value=0 step=50 class="stepsInput">
+        <span class="stepsSpan">Чт</span><input type="number" min=100 max=100000 value=0 step=50 class="stepsInput">
+        <span class="stepsSpan">Пт</span><input type="number" min=100 max=100000 value=0 step=50 class="stepsInput">
+        <span class="stepsSpan">Сб</span><input type="number" min=100 max=100000 value=0 step=50 class="stepsInput">
+        <span class="stepsSpan">Вс</span><input type="number" min=100 max=100000 value=0 step=50 class="stepsInput">
+        <button class="stepsButton" onclick="render()">Создать</button>
+        <button class="stepsButton" onclick="destroy()">Очистить</button>
+    </div>
+    </div>
+
+    </main>
+
+
+    <script src="assets/js/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.min.js
+    "></script> 
+</body>
+</html>

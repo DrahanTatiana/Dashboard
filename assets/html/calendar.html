@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/calendar.css">
+
+</head>
+<body>
+
+    <div id="container">
+        <div id="header">
+            <button id="backButton">Прошедший</button>
+            <div id="monthDisplay"></div>
+            <button id="nextButton">Следующий</button>
+        </div>
+
+        <div id="weekdays">
+            <div>Понедельник</div>
+            <div>Вторник</div>
+            <div>Среда</div>
+            <div>Четверг</div>
+            <div>Пятница</div>
+            <div>Суббота</div>
+            <div>Воскресенье</div>
+
+        </div>
+
+        <div id="calendar"></div>
+    </div>
+
+    <div id="newEvent">
+        <h2>New Event</h2>
+
+        <input type="text" id= "eventTitleInput" placeholder="Название события">
+        <textarea id="eventInfo" placeholder="Напоминание" ></textarea>
+
+        <button id="saveButton">Сохранить</button>
+        <button id="cancelButton">Удалить</button>
+    </div>
+
+    <div id="deleteEvent">
+        <h2>Event</h2>
+
+        <p id="event_txt"></p>
+        <p id="event_txt_info"></p>
+
+        <button id="deleteButton">Удалить</button>
+        <button id="closeButton">Закрыть</button>
+    </div>
+
+    <div id="backgrounModal"></div>
+
+
+
+
+    <script src="assets/js/calendar.js"></script>
+
+</body>
+</html>

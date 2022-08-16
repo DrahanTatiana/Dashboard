@@ -1,0 +1,27 @@
+.header {
+    /* display: grid;*/
+    /*height: 50%;*/
+    grid-column: 1/3;
+    grid-row: 1/2;
+    display: inline-flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-top: -20px;
+
+}
+
+.images {
+    display: inline-flex;
+    justify-self: flex-start;
+    width: 30%;
+    /* margin-left: -10%; */
+    /* margin-top: 10px; */
+
+}
+
+#hi {
+    display: inline-flex;
+    align-self: center;
+    font-size: 1.5em;
+    margin-right: 30%;
+}
